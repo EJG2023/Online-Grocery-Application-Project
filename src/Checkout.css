@@ -1,0 +1,359 @@
+/* Main colors of the page. */
+:root {
+  --primary-green: #4CAF50;
+  --dark-green: #45a049;
+  --light-green: #8BC34A;
+  --background-light: #F1F8E9;
+  --text-dark: #333;
+  --text-light: #fff;
+}
+
+/* Sets the background color, margin, display properties, and font for the entire checkout page. */
+.checkout-body {
+  background-color: var(--background-light);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--text-dark);
+  font-family: 'Roboto', Arial, sans-serif;
+  padding: 0.5px 0.5px;
+}
+
+/* Flex container for the checkout page content. */
+.checkout-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles the container holding the checkout content. */ 
+.checkout-container {
+  background: #FFFFFF;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Styles the content area within the checkout container with scrollable content. */
+.checkout-content {
+  max-height: 510px;
+  overflow-y: auto;
+  margin: 20px 0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Styles the home button. */
+.checkout-home-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: var(--primary-green);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: var(--text-light);
+  border: none;
+  font-size: 14px;
+}
+
+.checkout-home-button:hover {
+  background-color: var(--dark-green);
+}
+
+/* Styles the payment button. */
+.checkout-payment-button {
+  background-color: var(--primary-green);
+  padding: 12px 24px;
+  width: 180px;
+  margin: 10px 0;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: var(--text-light);
+  border: none;
+  font-size: 16px;
+}
+
+.checkout-payment-button:hover {
+  background-color: var(--dark-green);
+}
+
+/* Styles the payment form. */
+.checkout-payment-form {
+  background-color: var(--background-light);
+  padding: 50px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.checkout-payment-items {
+  margin-top: 20px;
+}
+
+/* Stylings for checkout form. */
+.checkout-fill {
+  text-align: left;
+  margin: 30px 0;
+  border-top: 2px solid #eee;
+  padding-top: 20px;
+}
+
+/* Styles for the input fields. */
+.checkout-cc,
+.checkout-expiry,
+.checkout-sc {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styles labels for payment form fields. */
+.checkout-payment-font {
+  font-weight: 400;
+  color: #666;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Styles error messages in the form. */
+.checkout-error {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Adds a red border to invalid input fields. */
+.checkout-invalid-input {
+  border: 2px solid #e74c3c;
+}
+
+/* Styles the message shown when checkout is empty. */
+.checkout-empty-item {
+  font-size: 24px;
+  color: #666;
+  margin: 40px 0;
+}
+
+/* Stylings for the cart items. */
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin: 10px 0;
+  border-bottom: 1px solid #eee;
+  gap: 20px;
+}
+
+.cart-item-picture {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.cart-item-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cart-item-description {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-item-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cart-item-price {
+  font-size: 16px;
+  color: var(--primary-green);
+}
+
+.cart-quantity-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-btn {
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary-green);
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.quantity-btn:hover:not(:disabled) {
+  background-color: var(--dark-green);
+}
+
+.quantity-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quantity-input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+.cart-remove-btn {
+  background-color: #e74c3c;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+  padding: 8px 16px;
+}
+
+.cart-remove-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Styles for devices with a screen width of 768px or less. */
+@media (max-width: 768px) {
+  .checkout-container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item-picture {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .cart-item-description {
+    width: 100%;
+  }
+
+  .checkout-payment-button {
+    width: 100%;
+  }
+
+  .checkout-home-button {
+    position: static;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .checkout-payment-form {
+    width: 100%;
+  }
+}
+
+/* Customizes the appearance of the scrollbar for the checkout content area. */
+
+.checkout-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.checkout-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.checkout-content::-webkit-scrollbar-thumb {
+  background: var(--primary-green);
+  border-radius: 4px;
+}
+
+.checkout-content::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-green);
+}
+
+/* Extra stylings for the page. */
+h1 {
+  color: var(--primary-green);
+  margin-bottom: 20px;
+}
+
+.checkout-total {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: right;
+}
+
+
+.checkout-cc:focus,
+.checkout-expiry:focus,
+.checkout-sc:focus,
+.checkout-payment-button:focus,
+.quantity-btn:focus,
+.cart-remove-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5);
+}
+
+
+.cart-item:hover {
+  background-color: #f9f9f9;
+}
+
+
+.checkout-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 20px;
+  color: #888;
+}
+
+
+.checkout-payment-button,
+.checkout-home-button,
+.quantity-btn,
+.cart-remove-btn {
+  transition: all 0.3s ease;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

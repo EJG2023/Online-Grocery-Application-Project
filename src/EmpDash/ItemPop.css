@@ -1,0 +1,65 @@
+/* Overlay for item pop-up, covering the entire screen */
+.item-pop-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  /* Content container for the item pop-up */
+  .item-pop-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 320px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+  }
+  
+  /* List container inside the pop-up */
+  .item-list-pop {
+    list-style-type: none; 
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+
+  /* Individual item in the list */
+  .item-pop {
+    margin-bottom: 10px;
+    background-color: lightgreen;
+  }
+  
+  /* Name of the item */
+  .item-name-pop {
+    font-weight: bold; 
+  }
+  
+  /* Quantity of the item */
+  .item-quantity-pop {
+    color: #555; 
+  }
+  
+  /* Button to return */
+  .return-button {
+    background-color: #808080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Hover state for the return button */
+  .return-button:hover {
+    background-color: #696969; 
+    color: #fff;
+  }

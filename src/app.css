@@ -1,0 +1,142 @@
+/* Main colors used throughout the page */
+:root {
+  --primary-green: #4CAF50;
+  --dark-green: #2E7D32;
+  --light-green: #8BC34A;
+  --accent-green: #00C853;
+  --background-light: #F1F8E9;
+  --background-white: #FFFFFF;
+  --text-dark: #1B5E20;
+  --text-light: #FFFFFF;
+  --text-muted: #689F38;
+  --border-color: #DCEDC8;
+}
+
+/* Applies styles on the body element */
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+/* Applies style on the main app containe */
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for the main content area */
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Utility classes */
+.text-green {
+  color: var(--primary-green);
+}
+
+.bg-green {
+  background-color: var(--primary-green);
+  color: var(--text-light);
+}
+
+/* Styles for the primary buttons */
+
+.btn-green {
+  background-color: var(--primary-green);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-green:hover {
+  background-color: var(--dark-green);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Customizes the appearance of the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-green);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-green);
+}
+
+/* This adjusts the styles for smaller screens */
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10px;
+  }
+}
+
+/* These codes applies stylings on all the Employee Dashboard's elements */
+
+.employee-dashboard-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: var(--primary-green);
+  color: var(--text-light);
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.employee-dashboard-btn:hover {
+  background-color: var(--dark-green);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.employee-dashboard-btn .btn-icon {
+  font-size: 20px;
+}
+
+.employee-dashboard-btn .btn-text {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .employee-dashboard-btn {
+    padding: 10px;
+  }
+
+  .employee-dashboard-btn .btn-text {
+    display: none;
+  }
+}
